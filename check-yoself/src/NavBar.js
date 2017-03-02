@@ -5,7 +5,18 @@ import AnalyzeMyPost from './AnalyzeMyPost';
 import MyHistory from './MyHistory';
 
 class NavBar extends React.Component {
+  constructor(){
+    super();
 
+    this.get_history = this.get_history.bind(this);
+  }
+
+  get_history(){
+    console.log('fetching')
+    fetch('/posts')
+    .then(res => console.log('this is the res', res))
+    .catch(err => console.log(err))
+  }
 
   render(){
 
@@ -16,7 +27,7 @@ class NavBar extends React.Component {
              <AnalyzeMyPost />
           </Tab>
           <Tab eventKey={2} title="My History">Blabbity blah blah 🐣
-            <MyHistory />
+            <MyHistory get_history={this.get_history}/>
           </Tab>
         </Tabs>
       </div>
@@ -26,3 +37,6 @@ class NavBar extends React.Component {
 }
 
 export default NavBar;
+
+
+

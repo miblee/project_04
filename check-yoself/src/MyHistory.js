@@ -10,7 +10,6 @@ class MyHistory extends React.Component {
       post_log: 'bald eagle'
     }
 
-    this.get_history = this.get_history.bind(this);
     // this.analyzePost = this.analyzePost.bind(this);
   // }
 
@@ -23,19 +22,14 @@ class MyHistory extends React.Component {
 
   }
 
-  get_history(){
-    console.log('fetching')
-    fetch('/text')
-    .then(res => console.log(res))
-    .then(j => console.log(j))
-    .catch(err => console.log(err))
-  }
 
   render() {
-    {this.get_history()}
+    const log = this.props.get_history();
     return (
       <div>
         Howdy<br />
+        {log}
+        {this.props.get_history}
       </div>
     )
 
