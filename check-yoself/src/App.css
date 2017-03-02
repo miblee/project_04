@@ -1,0 +1,62 @@
+.App {
+  text-align: center;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Gloria Hallelujah', cursive;
+  background-color: #C0B9A7;
+}
+
+.jumbotron {
+  background-color: #3D382E;
+  color: #D1CABA;
+}
+
+h1 {
+  background-color: #3D382E;
+}
+
+h3 {
+  color: #756E5E;
+}
+
+#login_btn {
+  font-family: 'Roboto', sans-serif;
+}
+
+#learn_more_btn {
+  font-family: 'Roboto', sans-serif;
+}
+
+#submit_btn {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+/*STUFF FROM CREATE-REACT-APP*/
+
+/*.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}*/
+
+/*.App-header {
+  background-color: #3D382E;
+  height: 150px;
+  padding: 20px;
+  color: #D1CABA;
+  text-align: left;
+}
+*/
+
+/*.App-intro {
+  font-size: large;
+}*/
+
+/*@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}*/

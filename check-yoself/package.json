@@ -1,0 +1,32 @@
+{
+  "name": "check-yoself",
+  "version": "0.1.0",
+  "private": true,
+  "proxy":"http://localhost:8080",
+  "devDependencies": {
+    "react-scripts": "0.9.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "dotenv": "^4.0.0",
+    "express": "^4.14.1",
+    "express-session": "^1.15.1",
+    "mongoose": "^4.8.5",
+    "morgan": "^1.8.1",
+    "path": "^0.12.7",
+    "react": "^15.4.2",
+    "react-bootstrap": "^0.30.7",
+    "react-dom": "^15.4.2",
+    "react-router": "^3.0.2",
+    "request": "^2.79.0",
+    "serve-favicon": "^2.4.1",
+    "session": "^0.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "seed": "node ./config/seeds.js",
+    "eject": "react-scripts eject"
+  }
+}
