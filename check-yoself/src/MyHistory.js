@@ -69,6 +69,7 @@ class MyHistory extends React.Component {
 
   render() {
     const liStyle = {listStyle: 'none'};
+    const delBtnStyle = {backgroundColor: '#EEDCE1'};
     return(
       <div>
         <h3>Your Analyzed Text Log</h3>
@@ -83,7 +84,7 @@ class MyHistory extends React.Component {
                         <h4>{object.date}</h4><hr />
                         <p>" {object.content} "</p>
                         <p>score: {object.score}</p>
-                        <Button id={object._id} onClick={this.deletePost} bsSize="xsmall">Delete</Button>
+                        <Button className="deleteBtn" style={delBtnStyle} id={object._id} onClick={this.deletePost} bsSize="xsmall">Delete</Button>
                       </Col>
                   </li>
                   )
