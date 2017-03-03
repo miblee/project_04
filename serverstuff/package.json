@@ -21,10 +21,6 @@
   },
   "proxy": "http://localhost:3001",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "seed": "node ./config/seeds.js",
-    "eject": "react-scripts eject"
+    "start": "node server.js",
   }
 }
