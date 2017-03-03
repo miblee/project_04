@@ -34,7 +34,7 @@ class MyHistory extends React.Component {
   // }
 
   getHistory(){
-    fetch('/posts')
+    fetch('https://thawing-forest-37622.herokuapp.com/posts')
     .then(res => res.json() )
     .then( data => {
       this.setState({
@@ -49,7 +49,7 @@ class MyHistory extends React.Component {
     evt.preventDefault();
     var id = evt.target.id;
 
-    fetch(`/posts/${id}`, {
+    fetch(`https://thawing-forest-37622.herokuapp.com/posts/${id}`, {
       method:'post',
       headers: {
         'Content-Type': 'application/json'

@@ -35,7 +35,7 @@ class AnalyzeMyPost extends React.Component {
     // HOW TO RESET TEXT AREA?
     // evt.target.value = '';
 
-    fetch('/api', {
+    fetch('https://thawing-forest-37622.herokuapp.com/api', {
       method:'post',
       headers: {
         'Content-Type': 'application/json'
