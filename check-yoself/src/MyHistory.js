@@ -8,16 +8,30 @@ class MyHistory extends React.Component {
 
     this.state = {
       log: [],
-      deletePostRes: ''
+      deletePostRes: '',
+      avgScore: null
     }
 
     this.getHistory = this.getHistory.bind(this);
     this.deletePost = this.deletePost.bind(this);
+    // this.calcAvgScore = this.calcAvgScore.bind(this);
   };
 
   componentWillMount(){
     this.getHistory()
   }
+
+
+// WOULD BE NICE TO BE ABLE TO GRAPH GLOBAL DATA OUT VISUALLY
+  // calcAvgScore(){
+  //   var sum = (this.state.log).reduce( (total, num) =>{
+  //     return total + num;
+  //   });
+  //   var avg = (sum)/((this.state.log).length)
+  //   this.setState({
+  //     avgScore: avg
+  //   })
+  // }
 
   getHistory(){
     fetch('/posts')

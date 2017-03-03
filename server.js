@@ -79,7 +79,6 @@ app.get('/posts', (req, res)=>{
 // DELETES POST
 app.post('/posts/:id', (req, res) => {
   var id = req.params.id;
-  console.log('req id is', req.params.id)
   Post.remove({_id: id}, function(error) {
     if(error) {
       return res.json({message: 'Could not delete post b/c:' + error})

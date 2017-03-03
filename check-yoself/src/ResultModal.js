@@ -1,39 +1,36 @@
 import React from 'react';
 import './App.css';
-import {Modal, Button} from 'react-bootstrap';
+import {Button, Modal} from 'react-bootstrap';
 
 
 class ResultModal extends React.Component {
 
   render(){
-    console.log(this.props);
+    const fakeModalStyle = {
+      backgroundColor: '#EEDCE1',
+    }
+
     return (
-      <Modal id='ResultsModal'>
-        <Modal.Title>Post Analysis</Modal.Title>
-        Your Statement:" {this.props.textContent} "
-        It's Evalution: {this.props.score}
-        <Button onClick={this.props.close}>Close</Button>
-      </Modal>
+      <div>
+        <div className="static-modal">
+          <Modal.Dialog >
+            <Modal.Header>
+              <Modal.Title>Your Post Analysis</Modal.Title>
+            </Modal.Header>
+
+            <Modal.Body style={fakeModalStyle}>
+              <p>Your Statement: {this.props.textContent}</p>
+              <p>It's Sentiment Rating: {this.props.score}</p>
+            </Modal.Body>
+
+            <Modal.Footer>
+              <Button onClick={this.props.close} >❌</Button>
+            </Modal.Footer>
+          </Modal.Dialog>
+        </div>
+      </div>
     )
   }
 }
 
 export default ResultModal
-
-
-    // {
-      // <Modal show={this.props.show} onHide={this.props.close}>
-      //       <Modal.Dialog>
-      //         <Modal.Header closeButton>
-      //           <Modal.Title>I know you'd like to think your 💩  don't stink</ Modal.Title>
-      //         </Modal.Header>
-      //         <Modal.Body>
-      //           {this.props.query} evaluates to:
-      //           {this.props.score}
-      //         </ Modal.Body>
-      //         <Modal.Footer>
-      //           <Button onClick={this.props.close}>Close</Button>
-      //         </Modal.Footer>
-      //       </Modal.Dialog>
-      //     </Modal>
-      // }
