@@ -12,6 +12,8 @@ const app = express();
 require('./config/database');
 const Post = require('./models/Post');
 
+app.use(require('cors')());
+
 app.use(morgan('dev'))
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(bodyParser.urlencoded({extended: true}))
