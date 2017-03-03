@@ -14,4 +14,7 @@
     "request": "^2.79.0",
     "serve-favicon": "^2.4.1"
   },
+  "scripts": {
+    "build": "react-scripts build"
+  }
 }
