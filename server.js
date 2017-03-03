@@ -95,6 +95,25 @@ app.post('/posts/:id', (req, res) => {
 
 
 
+// PRESIDENTS' LAB UPDATE FUNCTION FOR IF/WHEN I GET TO UPDATE POSTS
+// function updatePost(request, response) {
+//   var id = request.params.id;
+
+//   Post.findById({_id: id}, function(error, post) {
+//     if(error) response.json({message: 'Could not find post b/c:' + error});
+
+//     if(request.body.name) post.name = request.body.name;
+//     if(request.body.start) post.start = request.body.start;
+//     if(request.body.end) post.end = request.body.end;
+//     if(request.body.uncovered !== undefined) post.uncovered = request.body.uncovered;
+
+//     post.save(function(error) {
+//       if(error) response.json({messsage: 'Could not update post b/c:' + error});
+
+//       response.json({message: 'Post successfully updated', post: post});
+//     });
+//   });
+// }
 
 const port = process.env.PORT || 3001
 app.listen(port, () => {

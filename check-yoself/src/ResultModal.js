@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-// import {Modal, Button} from 'react-bootstrap';
+import {Modal, Button} from 'react-bootstrap';
 
 
 class ResultModal extends React.Component {
@@ -8,12 +8,12 @@ class ResultModal extends React.Component {
   render(){
     console.log(this.props);
     return (
-
-        <div id='ResultsModal'>
-          Your Statement:" {this.props.textContent} " <br />
-          It's Sentiment Rating: {this.props.score}
-        <br /><span onClick={this.props.close} >| close |</span>
-        </div>
+      <Modal id='ResultsModal'>
+        <Modal.Title>Post Analysis</Modal.Title>
+        Your Statement:" {this.props.textContent} "
+        It's Evalution: {this.props.score}
+        <Button onClick={this.props.close}>Close</Button>
+      </Modal>
     )
   }
 }
