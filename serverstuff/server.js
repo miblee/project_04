@@ -9,8 +9,8 @@ const app = express();
 // CONFIG
 
 // starts up db
-require('./check-yoself/config/database');
-const Post = require('./check-yoself/models/Post');
+require('./config/database');
+const Post = require('./models/Post');
 
 app.use(morgan('dev'))
 app.use(express.static(path.join(__dirname, 'public')))

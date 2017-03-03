@@ -28,5 +28,6 @@
     "test": "react-scripts test --env=jsdom",
     "seed": "node ./config/seeds.js",
     "eject": "react-scripts eject"
-  }
+  },
+  "homepage": "https://miblee.github.io/project_04/"
 }
