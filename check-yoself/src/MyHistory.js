@@ -7,33 +7,48 @@ class MyHistory extends React.Component {
     super(props);
 
     this.state = {
-      post_log: 'bald eagle'
+      log: []
     }
 
-    // this.analyzePost = this.analyzePost.bind(this);
-  // }
+    this.get_history = this.get_history.bind(this);
 
+  };
 
-  // handleChange(evt){
-  //   this.setState({
-  //     query: evt.target.value
-  //   });
-  // }
-
+componentWillMount(){
+  this.get_history()
+}
+  get_history(){
+    fetch('/posts')
+    .then(res => res.json() )
+    .then( data => {
+      this.setState({
+        log: data.posts
+      })
+    })
+    .catch(err => console.log(err))
   }
 
 
-  render() {
-    const log = this.props.get_history();
-    return (
+
+  render(){
+    const liStyle = {
+      listStyle: 'none'
+    };
+
+    console.log(this.state)
+    return(
       <div>
-        Howdy<br />
-        {log}
-        {this.props.get_history}
+        <ul>
+          {
+            this.state.log.map( (object, i) => {
+              return <li style={liStyle} key={i} className="card">analyzed text: {object.content} || score: {object.score}</li>
+            })
+          }
+        </ul>
       </div>
     )
-
   }
+
 }
 
 export default MyHistory;

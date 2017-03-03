@@ -8,15 +8,20 @@ class NavBar extends React.Component {
   constructor(){
     super();
 
-    this.get_history = this.get_history.bind(this);
+    // this.get_history = this.get_history.bind(this);
   }
 
-  get_history(){
-    console.log('fetching')
-    fetch('/posts')
-    .then(res => console.log('this is the res', res))
-    .catch(err => console.log(err))
-  }
+  // get_history(){
+  //   console.log('fetching history log')
+  //   fetch('/posts')
+  //   .then(res => res.json() )
+  //   .then( data => {
+  //     this.setState ({
+  //       log: (this.statel.log).concat(data)
+  //     })
+  //   })
+  //   .catch(err => console.log(err))
+  // }
 
   render(){
 
@@ -27,7 +32,7 @@ class NavBar extends React.Component {
              <AnalyzeMyPost />
           </Tab>
           <Tab eventKey={2} title="My History">Blabbity blah blah 🐣
-            <MyHistory get_history={this.get_history}/>
+            <MyHistory />
           </Tab>
         </Tabs>
       </div>

@@ -10,12 +10,14 @@ class AnalyzeMyPost extends React.Component {
 
     this.state = {
       query: '',
-      score: null
+      score: null,
+      showModal: false
     }
 
     this.handleChange = this.handleChange.bind(this);
     this.analyzePost = this.analyzePost.bind(this);
-
+    this.closeModal = this.closeModal.bind(this);
+    this.openModal = this.openModal.bind(this)
   }
 
 
@@ -52,6 +54,14 @@ class AnalyzeMyPost extends React.Component {
   }
 
 
+  closeModal() {
+    this.setState({ showModal: false });
+  };
+
+  openModal() {
+    this.setState({ showModal: true });
+  };
+
   render() {
     return (
       <div>
@@ -59,10 +69,14 @@ class AnalyzeMyPost extends React.Component {
           <FormGroup bsSize="large">
            <textarea style={{marginTop: '2em'}} rows="7" cols="50" type="text" onChange={this.handleChange} placeholder="Text to Analyze">
            </textarea><br />
-           <Button id="submit_btn" type="submit" onClick={this.open}>Submit</Button>
+           <Button id="submit_btn" type="submit" onClick={this.openModal}>Submit</Button>
           </FormGroup>
         </form>
-        <ResultModal score={this.state.score} textContent={this.state.query} />
+        {
+          this.state.showModal ?
+        <ResultModal close={this.closeModal} score={this.state.score} textContent={this.state.query} />
+        : null
+        }
       </div>
     )
 
