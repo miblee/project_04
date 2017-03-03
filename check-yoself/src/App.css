@@ -7,20 +7,21 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Gloria Hallelujah', cursive;
-  background-color: #C0B9A7;
+  /*background-color: #C0B9A7;*/
 }
 
 .jumbotron {
-  background-color: #3D382E;
+  /*background-color: #3D382E;*/
   color: #D1CABA;
 }
 
 h1 {
-  background-color: #3D382E;
+  /*background-color: #3D382E;*/
 }
 
 h3 {
-  color: #756E5E;
+  color: #E5BECF;
+  /*color: #756E5E;*/
 }
 
 #login_btn {
@@ -33,6 +34,11 @@ h3 {
 
 #submit_btn {
   font-family: 'Roboto', sans-serif;
+}
+
+.oneThought {
+  border: 1px solid #EEDCE1;
+  padding: 1em;
 }
 
 

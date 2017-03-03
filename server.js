@@ -18,6 +18,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
 app.use(session({secret: 'keyboard cat', resave: false, saveUninitialized: true}))
 
+// MAKES API REQ TO MS TEXT ANALYTICS API
 app.post('/api', (req, res)=>{
   var url = 'https://westus.api.cognitive.microsoft.com/text/analytics/v2.0/sentiment'
   var query = req.body["query"];
@@ -64,6 +65,8 @@ app.post('/api', (req, res)=>{
 
 })
 
+
+// GETS POST HISTORY
 app.get('/posts', (req, res)=>{
   Post.find(function(error, posts) {
     if(error){
@@ -72,6 +75,25 @@ app.get('/posts', (req, res)=>{
     res.json({posts: posts});
   });
 })
+
+// DELETES POST
+app.post('/posts/:id', (req, res) => {
+  var id = req.params.id;
+  console.log('req id is', req.params.id)
+  Post.remove({_id: id}, function(error) {
+    if(error) {
+      return res.json({message: 'Could not delete post b/c:' + error})
+    };
+  })
+  Post.find(function(error, posts) {
+    if(error){
+      return response.json({message: 'Could not find any posts'});
+    }
+    res.json({posts: posts});
+  })
+})
+
+
 
 
 const port = process.env.PORT || 3001
