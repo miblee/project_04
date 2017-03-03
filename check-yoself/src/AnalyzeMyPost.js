@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import {FormGroup, Button, Modal} from 'react-bootstrap';
-
+import {FormGroup, Button} from 'react-bootstrap';
+import ResultModal from './ResultModal.js'
 
 
 class AnalyzeMyPost extends React.Component {
@@ -15,9 +15,7 @@ class AnalyzeMyPost extends React.Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.analyzePost = this.analyzePost.bind(this);
-    this.getInitialState = this.getInitialState.bind(this);
-    this.close = this.close.bind(this);
-    this.open = this.open.bind(this)
+
   }
 
 
@@ -25,18 +23,6 @@ class AnalyzeMyPost extends React.Component {
     this.setState({
       query: evt.target.value
     });
-  };
-
-  getInitialState() {
-    return { showModal: false };
-  };
-
-  close() {
-    this.setState({ showModal: false });
-  };
-
-  open() {
-    this.setState({ showModal: true });
   };
 
 
@@ -76,20 +62,7 @@ class AnalyzeMyPost extends React.Component {
            <Button id="submit_btn" type="submit" onClick={this.open}>Submit</Button>
           </FormGroup>
         </form>
-        <Modal show={this.state.showModal} onHide={this.close}>
-          <Modal.Dialog>
-            <Modal.Header closeButton>
-              <Modal.Title>I know you'd like to think your 💩  don't stink</ Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-              {this.state.query} evaluates to:
-              {this.state.score}
-            </ Modal.Body>
-            <Modal.Footer>
-              <Button onClick={this.close}>Close</Button>
-            </Modal.Footer>
-          </Modal.Dialog>
-        </Modal>
+        <ResultModal score={this.state.score} textContent={this.state.query} />
       </div>
     )
 
