@@ -1,4 +1,4 @@
-# Check Yo Self!: A MEAN stack SPA app (Project #4, aka "Keystone" Project)
+# Check Yo Self!: A MERN stack SPA app (Project #4, aka "Keystone" Project)
 
 ![appscreenshot](http://i.imgur.com/5l17ZJk.png)
 
