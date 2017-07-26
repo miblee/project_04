@@ -78,10 +78,11 @@ class MyHistory extends React.Component {
             <Row className="show-grid">
               {
                 this.state.log.map( (object, i) => {
+                  const prettyDate = object.date.split(0, 10);
                   return(
                     <li style={liStyle} key={i}>
                       <Col xs={6} md={4} className="oneThought">
-                        <h4>{object.date}</h4><hr />
+                        <h4>{prettyDate}</h4><hr />
                         <p>" {object.content} "</p>
                         <p>score: {object.score}</p>
                         <Button className="deleteBtn" style={delBtnStyle} id={object._id} onClick={this.deletePost} bsSize="xsmall">Delete</Button>

@@ -6,7 +6,7 @@ import {Button, Modal} from 'react-bootstrap';
 class ResultModal extends React.Component {
 
   render(){
-    const fakeModalStyle = {
+    const modalStyle = {
       backgroundColor: '#EEDCE1',
     }
 
@@ -18,9 +18,9 @@ class ResultModal extends React.Component {
               <Modal.Title>Your Post Analysis</Modal.Title>
             </Modal.Header>
 
-            <Modal.Body style={fakeModalStyle}>
+            <Modal.Body style={modalStyle}>
               <p>Your Statement: {this.props.textContent}</p>
-              <p>It's Sentiment Rating: {this.props.score}</p>
+              <p>Its Sentiment Rating: {this.props.score}</p>
             </Modal.Body>
 
             <Modal.Footer>
