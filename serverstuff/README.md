@@ -17,8 +17,8 @@
 
 ### Project Approach
 
-[Trello Board](https://trello.com/b/BFHLAH2Y/wdi-capstone)
-^ contains wireframes, EDM, as well as user stories
+[Trello Board](https://trello.com/b/BFHLAH2Y/wdi-capstone):
+contains wireframes, EDM, as well as user stories
 
 **Sunday:** Asked my sister for project ideas. She told me she just sent an angry drunk text to someone and wished there was an app to help keep her messaging in check. Looked into APIs that could help with that.
 
