@@ -1,4 +1,4 @@
-# Check Yo Self!: A MEAN stack SPA app (Project #4, aka "Keystone" Project)
+# Check Yo Self!: A MERN stack SPA app (Project #4, aka "Keystone" Project)
 
 ![appscreenshot](http://i.imgur.com/5l17ZJk.png)
 
@@ -22,7 +22,7 @@ contains wireframes, EDM, as well as user stories
 
 **Sunday:** Asked my sister for project ideas. She told me she just sent an angry drunk text to someone and wished there was an app to help keep her messaging in check. Looked into APIs that could help with that.
 
-****Monday:** Began wireframing and started Trello board to plot out my process. Decided on SPA just because I'm personally not so fond of watching a whole new page load upon redirects. Decided on React because it comes with `create-react-app` and I cannot set up my own file structure. I cannot.
+**Monday:** Began wireframing and started Trello board to plot out my process. Decided on SPA just because I'm personally not so fond of watching a whole new page load upon redirects. Decided on React because it comes with `create-react-app` and I cannot set up my own file structure. I cannot.
 
 **Tuesday:** Got dead-ended after setting up frontend and moving on to backend because of lack of server support on React's part. Instead of learning React Render (which sounded like it would require redirects but I could be wrong), I decided to go forth with Express since I'm already familiar with it and Friday was already feeling too close for comfort. Copy pasted from past projects but this may have set me back because I didn't recognize anything I was pasting over and so I was stuck figuring out how to connect all the modularized files and routes together. There were so many bugs that most functions couldn't even console.log. Gave up on the idea of accomplished OAuth this week which threw off how I planned some of the user stories of global insights.
 
